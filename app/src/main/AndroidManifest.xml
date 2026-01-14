@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Jadwalku"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+
+        <!-- Splash Screen sebagai Launcher -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Jadwalku.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Login Activity -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Jadwalku.NoActionBar"/>
+
+        <!-- Register Activity -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Jadwalku.NoActionBar"/>
+
+        <!-- Admin Activities -->
+        <activity
+            android:name=".admin.AdminMainActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".admin.TambahJadwalActivity"
+            android:exported="false"
+            android:parentActivityName=".admin.AdminMainActivity"/>
+
+        <activity
+            android:name=".admin.EditJadwalActivity"
+            android:exported="false"
+            android:parentActivityName=".admin.AdminMainActivity"/>
+
+        <!-- Mahasiswa Activities -->
+        <activity
+            android:name=".mahasiswa.MahasiswaMainActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".mahasiswa.ProfileActivity"
+            android:exported="false"
+            android:parentActivityName=".mahasiswa.MahasiswaMainActivity"/>
+
+    </application>
+
+</manifest>

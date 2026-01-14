@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Content -->
+        <LinearLayout
+            android:id="@+id/layoutContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="60dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvMataKuliah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pemrograman Mobile"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/tvDosen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Dosen: Dr. Ahmad"
+                android:textSize="13sp"
+                android:textColor="@color/gray"/>
+
+            <TextView
+                android:id="@+id/tvHariJam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Senin, 08:00 - 10:00"
+                android:textSize="13sp"
+                android:textColor="@color/primary"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvRuangan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Ruang: Lab 1"
+                android:textSize="12sp"
+                android:textColor="@color/gray"/>
+
+            <TextView
+                android:id="@+id/tvSks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="3 SKS"
+                android:textSize="12sp"
+                android:textColor="@color/accent"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <!-- Favorite Button -->
+        <ImageButton
+            android:id="@+id/btnFavorite"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_favorite_border"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Favorite"
+            android:tint="@color/gray"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
